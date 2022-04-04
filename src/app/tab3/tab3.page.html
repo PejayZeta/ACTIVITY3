@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Contacts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div padding>
+    
+  </div>
+  
+  
+  <div>
+    <ion-list>
+<ion-list>
+  <ion-item-sliding *ngFor="let item of items">
+    <ion-item-options side="start">
+      <ion-item-option (click)="alertThis()"><ion-icon name="trash"></ion-icon></ion-item-option>
+      <ion-item-option (click)="alertThis()"><ion-icon name="mail-outline"></ion-icon></ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/icon.png">
+        </ion-thumbnail>
+       {{item.name}}<br>
+       {{item.number}}
+    </ion-item>
+    
+  </ion-item-sliding>
+  
+</ion-list>
+
